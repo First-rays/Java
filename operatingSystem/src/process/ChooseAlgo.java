@@ -8,7 +8,7 @@ import realize.Sjf;
 import java.util.Scanner;
 
 public class ChooseAlgo {
-    public static void chooseOneAlgo(){
+    public void chooseOneAlgo(){
         IprocessContral[] chooseProcess = new IprocessContral[]{
                 new Fcfs(),
                 new Sjf(),
@@ -24,10 +24,10 @@ public class ChooseAlgo {
     }
     public static void menu(){
         System.out.println("***************************");
-        System.out.println("***** 1.先来先服务算法  ****");
-        System.out.println("***** 2.短进程优先算法  ****");
-        System.out.println("***** 3.高优先级算法    ****");
-        System.out.println("***** 4.时间片轮转      ****");
+        System.out.println("**** 1.先来先服务算法  ****");
+        System.out.println("**** 2.短进程优先算法  ****");
+        System.out.println("**** 3.高优先级算法    ****");
+        System.out.println("**** 4.时间片轮转      ****");
         System.out.println("****************************");
     }
 }
