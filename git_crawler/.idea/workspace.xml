@@ -10,10 +10,25 @@
   <component name="CompilerWorkspaceConfiguration">
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -36,6 +51,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -58,6 +74,20 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="crawler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProjectDao" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dao.ProjectDao" />
+      <module name="git_crawler" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -98,10 +128,12 @@
     <list>
       <item itemvalue="Application.Crawler" />
       <item itemvalue="Application.TestGson" />
+      <item itemvalue="Application.ProjectDao" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Crawler" />
+        <item itemvalue="Application.ProjectDao" />
         <item itemvalue="Application.TestGson" />
       </list>
     </recent_temporary>
@@ -135,6 +167,9 @@
       <workItem from="1584367711370" duration="796000" />
       <workItem from="1584369463054" duration="2631000" />
       <workItem from="1584406098725" duration="5717000" />
+      <workItem from="1585107371487" duration="70000" />
+      <workItem from="1585295693447" duration="5702000" />
+      <workItem from="1585360290413" duration="5601000" />
     </task>
     <servers />
   </component>
@@ -151,26 +186,26 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584369559368">
+    <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585361928937">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1584369559368" />
-    <state width="1323" height="389" key="GridCell.Tab.0.bottom" timestamp="1584445537685">
+    <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1585361928937" />
+    <state width="1323" height="520" key="GridCell.Tab.0.bottom" timestamp="1585365817955">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="389" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584445537685" />
-    <state width="1323" height="389" key="GridCell.Tab.0.center" timestamp="1584445537684">
+    <state width="1323" height="520" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585365817955" />
+    <state width="1323" height="520" key="GridCell.Tab.0.center" timestamp="1585365817955">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="389" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584445537684" />
-    <state width="1323" height="389" key="GridCell.Tab.0.left" timestamp="1584445537677">
+    <state width="1323" height="520" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585365817955" />
+    <state width="1323" height="520" key="GridCell.Tab.0.left" timestamp="1585365817955">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="389" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584445537677" />
-    <state width="1323" height="389" key="GridCell.Tab.0.right" timestamp="1584445537684">
+    <state width="1323" height="520" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585365817955" />
+    <state width="1323" height="520" key="GridCell.Tab.0.right" timestamp="1585365817955">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="389" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584445537684" />
+    <state width="1323" height="520" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585365817955" />
     <state x="186" y="9" key="SettingsEditor" timestamp="1584367851031">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -179,6 +214,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="375" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584406594544" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1585298547611">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1585298547611" />
   </component>
   <component name="masterDetails">
     <states>

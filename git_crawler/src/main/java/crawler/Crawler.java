@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import dao.Project;
+import dao.ProjectDao;
 import okhttp3.*;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -29,6 +30,7 @@ public class Crawler {
         urlBlackList.add("https://github.com/about");
         urlBlackList.add("https://github.com/pricing");
         urlBlackList.add("https://github.com/contact");
+        urlBlackList.add("https://api.github.com/repos/site/terms");
     }
 
     public static void main(String[] args) throws IOException {
@@ -38,16 +40,24 @@ public class Crawler {
         // System.out.println(respBody);
         // 2. 解析入口页面, 获取项目列表
         List<Project> projects = crawler.parseProjectList(html);
+        ProjectDao projectDao = new ProjectDao();
         // 3. 遍历项目列表, 调用 github API 获取项目信息
-        for (int i = 0; i < projects.size() && i < 5; i++) {
-            Project project = projects.get(i);
-            String repoName = crawler.getRepoName(project.getUrl());
-            String jsonString = crawler.getRepoInfo(repoName);
-            // System.out.println(jsonString);
-            // 4. 解析每个仓库获取到的 JSON 数据, 得到需要的信息
-            crawler.parseRepoInfo(jsonString, project);
-            System.out.println(project);
-            System.out.println("====================");
+        for (int i = 0; i < projects.size() ; i++) {
+            try {
+                Project project = projects.get(i);
+                String repoName = crawler.getRepoName(project.getUrl());
+                String jsonString = crawler.getRepoInfo(repoName);
+                // System.out.println(jsonString);
+                // 4. 解析每个仓库获取到的 JSON 数据, 得到需要的信息
+                crawler.parseRepoInfo(jsonString, project);
+
+                //5. 将数据保存到数据库中
+                projectDao.save(project);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+//            System.out.println(project);
+//            System.out.println("====================");
         }
     }
 
