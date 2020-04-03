@@ -76,7 +76,7 @@ public class ProjectDao {
 
     public static void main(String[] args) {
         ProjectDao projectDao = new ProjectDao();
-        List<Project> projects = projectDao.selectProjectByDate("20200328");
+        List<Project> projects = projectDao.selectProjectByDate("20200331");
         System.out.println(projects);
     }
 

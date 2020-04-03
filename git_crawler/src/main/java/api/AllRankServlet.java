@@ -6,6 +6,7 @@ import dao.Project;
 import dao.ProjectDao;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -31,7 +32,5 @@ public class AllRankServlet extends HttpServlet {
         //4. 把数据整理成json格式返回客户端
         String respString = gson.toJson(projects);
         resp.getWriter().write(respString);
-
-
     }
 }

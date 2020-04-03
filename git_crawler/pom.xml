@@ -122,7 +122,7 @@
 
 <build>
     <!-- 打包后的包名（和我们部署的项目名一致） -->
-    <finalName>blogdemo</finalName>
+    <finalName>git_crawler</finalName>
     <plugins>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
